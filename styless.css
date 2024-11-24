@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+  }
+  
+  /* Sol */
+  .son {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0 0 3em white;
+    transform: translate(-50%, -50%); /* Centrado en la pantalla */
+  }
+  
+  /* Contenedor de la órbita de la Tierra alrededor del Sol */
+  .earth-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 30em;
+    margin-top: -15em; /* Centra la órbita de la Tierra */
+    margin-left: -15em; /* Centra la órbita de la Tierra */
+    animation: earthOrbit 36.5s linear infinite; /* La Tierra gira alrededor del Sol */
+    transform-origin: center center; /* El centro de la órbita es el centro de la animación */
+  }
+  
+  /* Tierra */
+  .earth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  /* Contenedor de la órbita de la Luna alrededor de la Tierra */
+  .moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8em;
+    height: 8em;
+    margin-top: -4em; /* Ajuste para centrar la órbita de la Luna */
+    margin-left: -4em; /* Ajuste para centrar la órbita de la Luna */
+    animation: moonOrbit 2.7s linear infinite; /* La Luna gira alrededor de la Tierra */
+    transform-origin: center center; /* El centro de la órbita de la Luna */
+  }
+  
+  /* Luna */
+  .moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+    border-radius: 50%;
+  }
+  
+  /* Animación de la órbita de la Tierra alrededor del Sol */
+  @keyframes earthOrbit {
+    to {
+      transform: rotate(360deg); /* La Tierra gira alrededor del Sol */
+    }
+  }
+  
+  /* Animación de la órbita de la Luna alrededor de la Tierra */
+  @keyframes moonOrbit {
+    to {
+      transform: rotate(360deg); /* La Luna gira alrededor de la Tierra */
+    }
+  }
+  
+  
